@@ -1,0 +1,28 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(49, 49, 49);
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 800px;
+
+}
+
+.square {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.counter {
+    color: white;
+    font-family: sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+}

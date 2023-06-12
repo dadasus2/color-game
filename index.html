@@ -3,92 +3,24 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
 
 <head>
     <title>Random Color Squares</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
 
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-            width: 800px;
-
-        }
-
-        .square {
-            width: 100px;
-            height: 100px;
-            margin: 10px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-    </style>
 </head>
 
-<body onload="createSquares()">
 
+
+
+<body onload="createSquares()">
 
 
     <div class="container">
     </div>
 
-    <script>
-
-
-        function getRandomColor() {
-            const letters = "0123456789ABCDEF";
-            let color = "#";
-            for (let i = 0; i < 6; i++) {
-                color += letters[Math.floor(Math.random() * 16)];
-            }
-            return color;
-        }
-
-        function createSquares() {
-
-            const color = getRandomColor();
-
-            const container = document.querySelector(".container");
-            const uniqueSquare = document.createElement("div");
-            const randomOrder = Math.floor(Math.random() * (10 - 1 + 1)) + 1;
-            uniqueSquare.classList.add("square", "unique");
-            uniqueSquare.style.backgroundColor = getRandomColor();
-            uniqueSquare.style.order = randomOrder
-            container.appendChild(uniqueSquare);
-
-
-
-
-            for (let i = 0; i < 9; i++) {
-
-                const square = document.createElement("div");
-                square.classList.add("square");
-                square.style.backgroundColor = color;
-                square.style.order = Math.floor(Math.random() * 9) + 1
-                container.appendChild(square);
-            }
-
-            const unique = document.querySelector('.unique')
-            const squares = document.querySelectorAll('.square')
-            unique.addEventListener('click', () => {
-                squares.forEach(squari => {
-                    squari.remove()
-                });
-
-                createSquares()
-
-            })
-        }
-
-
-
-
-    </script>
+    <div class="counter">0</div>
+    <script src="script.js"></script>
 </body>
 
 </html>
