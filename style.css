@@ -53,6 +53,10 @@ body {
         flex-direction: column;
         justify-content: space-evenly;
     }
+
+    .square:hover {
+        opacity: 1;
+    }
 }
 
 .wrapper {
