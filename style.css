@@ -1,5 +1,10 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    background-color: rgb(49, 49, 49);
+    background-color: rgb(0, 0, 0);
     overflow-x: hidden;
     overflow-y: hidden;
     display: flex;
@@ -28,6 +33,12 @@ body {
     margin: 10px;
     border-radius: 5px;
     cursor: pointer;
+    transition: .2s;
+}
+
+.square:hover {
+    transition: .1s;
+    opacity: .7;
 }
 
 .counter {
@@ -42,4 +53,22 @@ body {
         flex-direction: column;
         justify-content: space-evenly;
     }
+}
+
+.wrapper {
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+}
+
+
+
+.wrapper h1 {
+    font-size: 50px;
 }
