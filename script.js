@@ -21,12 +21,12 @@ function createSquares() {
 
 
 
-    for (let i = 0; i < 11; i++) {
+    for (let i = 0; i < 8; i++) {
 
         var square = document.createElement("div");
         square.classList.add("square");
         square.style.backgroundColor = color;
-        square.style.order = Math.floor(Math.random() * 11) + 1
+        square.style.order = Math.floor(Math.random() * 8) + 1
         container.appendChild(square);
         square.addEventListener('click', () => {
             clickNormal()
@@ -48,9 +48,7 @@ function clickUnique() {
     });
     countScore()
     createSquares()
-
 }
-
 
 let scoreCount = 0
 function countScore() {
@@ -72,5 +70,7 @@ function updateScore() {
     var score = document.querySelector('.counter')
     score.textContent = scoreCount
 }
+
+
 
 

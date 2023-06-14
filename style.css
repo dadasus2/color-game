@@ -1,15 +1,25 @@
 body {
+    background-color: rgb(49, 49, 49);
+    overflow-x: hidden;
+    overflow-y: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(49, 49, 49);
+}
+
+
+.layout {
+    width: 600px;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .container {
     display: flex;
     flex-wrap: wrap;
-    width: 800px;
-
+    width: 360px;
 }
 
 .square {
@@ -25,4 +35,11 @@ body {
     font-family: sans-serif;
     font-size: 50px;
     font-weight: bold;
+}
+
+@media(max-width:765px) {
+    .layout {
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
 }
